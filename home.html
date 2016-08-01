@@ -1,0 +1,14 @@
+<div>
+  <div ng-repeat="person in peopleList.people">
+    <h2><a ng-href="#/person/{{person.id}}">{{person.name}}</a></h2>
+    <ul ng-controller="TodoListCtrl as todoList">
+      <li ng-repeat="todo in person.todos">
+        <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+      </li>
+      <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo(person)">add</a></li>
+    </ul>
+  </div>
+  <div>
+    <input type="text" ng-model="peopleList.nameToAdd"><a href="" ng-click="peopleList.addPerson()">add person</a>
+  </div>
+</div>

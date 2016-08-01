@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My ToDo List</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body ng-cloak>
+    <header>
+      <h1>My ToDo List</h1>
+    </header>
+
+    <main ng-view></main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="app.config.js"></script>
+    <script src="controllers.js"></script>
+  </body>
+</html>
